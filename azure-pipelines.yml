@@ -101,10 +101,10 @@ stages:
       name: 'RunTerraform'
       displayName: 'Run Terraform'
       env:
-        ARM_CLIENT_ID: $(ARM_CLIENT_ID)
-        ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
-        ARM_TENANT_ID: $(ARM_TENANT_ID)
-        ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+        ARM_CLIENT_ID: 17f04203-4fcd-4981-9395-724a54c5af67
+        ARM_CLIENT_SECRET: 4_E8276J.t~3f3GhFv-CgO6W.WYJSM31ih
+        ARM_TENANT_ID: 45d142e5-7685-41a6-bc92-fd4e4a7b5b7b
+        ARM_SUBSCRIPTION_ID: e8abe955-698d-433e-a3b3-9d70be5a7343
   - deployment: Deploy
     dependsOn: Provision
     variables:
@@ -124,4 +124,3 @@ stages:
               azureSubscription: 'Resource Manager - Tailspin - Space Game'
               appName: '$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
-              
